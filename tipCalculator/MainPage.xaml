@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tipCalculator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid ColumnDefinitions="*,*" RowDefinitions="auto, auto, auto, 300">
+            <Label Text="Bill"/>
+            <Entry Placeholder="Enter Amount"/>
+
+            <Label Text="Tip"/>
+            <Label Text="0.00" x:Name="lblTip"/>
+
+            <Label Text="Total"/>
+            <Label Text="0.00" x:Name="lblTotal"/>
+
+            <Label Text="Tip Percentage"/>
+            <Label Text="15%" x:Name="lblPercentage"/>
+            <Slider x:Name="sldrPercentage" Minimum="0" Maximum="100" ValueChanged="onSldrChange"/>
+
+            <Button Text="15%" Clicked="on15Clicked"/>
+            <Button Text="20%" Clicked="on20Clicked"/>
+            <Button Text="Round Down" Clicked="onDownClicked"/>
+            <Button Text="Round Up" Clicked="onUpClicked"/>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
